@@ -16,7 +16,7 @@ be calculated. From then, Z' can be generated per gene.
 
 A developing validation step is to compare previous q-value derived fgsea pathway analysis results with that of Z'. 
 
-[Full theoretical derivation of Z'](docs/zprime_derivation.pdf). 
+[Full theoretical derivation of Z'](docs/zprime_derivation.pdf) 
 
 ---
 
@@ -39,7 +39,7 @@ project-root/
 
 | Dataset | Access |
 |-------------|--------|
-| ASD-tested genes with their mutation counts/rates | [Supplementary Tables](https://pmc.ncbi.nlm.nih.gov/articles/PMC7250485/#SD6) |
+| Satterstrom et al. 2020 ASD-tested genes with their mutation counts/rates | [Supplementary Tables](https://pmc.ncbi.nlm.nih.gov/articles/PMC7250485/#SD6) |
 
 
 ---
