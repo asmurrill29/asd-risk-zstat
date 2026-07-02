@@ -5,7 +5,7 @@
 
 The TADA statistical model, or Transmission And De novo Association, was developed as a way of identifying risk
 genes for Autism Spectrum Disorder (ASD) through a Bayesian likelihood model from WES mutation data annotated as *de novo* and inherited
-mutations.^1^ TADA+ was derived to extend this model to include mutations of increasing deleteriousness (synonymous, missense, frameshift, etc.).^2^
+mutations. TADA+ was derived to extend this model to include mutations of increasing deleteriousness (synonymous, missense, frameshift, etc.).
 In both models, Bayes Factors are calculated and a subsequent FDR-like q-value per gene is used as a final metric of relative risk. My research of ASD rare-variant-enriched
 genes in downstream pathway analysis (see "common-vs-rare-variants-ASD" repo) demonstrated that although this rare-variant driven analysis of risk is valuable and effective, the 
 directionless, 0-1 bounded nature of its output statistic constrains the biological relevance of the TADA/TADA+ output. 
