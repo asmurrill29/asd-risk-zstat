@@ -29,6 +29,7 @@ project-root/
 │   └── raw/
 │       └── satterstrom_counts.xlsx
 ├── scripts/
+│   ├── relative_risk.stan    # Stan HMC model setup
 │   └── zprime_calc.R         # Generation of posterior distribution/z-prime calculation
 └── results/
 ```
