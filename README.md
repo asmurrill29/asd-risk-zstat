@@ -14,7 +14,8 @@ Thus, I have proposed the usage of a directed, normally distributed Wald Z-like 
 Bernstein von Mises theorem (BvM). Here I will use develop a Stan Hamiltonian Monte Carlo algorithm to estimate the relative risk distribution for each tested gene, from which the posterior mean and standard deviation can
 be calculated. From then, Z' can be generated per gene. 
 
-A developing validation step is to compare previous q-value derived fgsea pathway analysis results with that of Z'. 
+A developing validation step is to (1) get *de novo* PTV specific q-values from the TADA-derived Bayes Factors per gene using [TADA-R source code](https://github.com/limo936/TADA-R) and 
+(2) use existing pathway analysis code to compare gene rankings under the q-value vs Z', looking at depletion representation specifically. 
 
 [Full theoretical derivation of Z'](docs/zprime_derivation.pdf) 
 
@@ -50,6 +51,9 @@ project-root/
 ```r
 # Install required packages
 install.packages("rstan")
+
+# Get Bayesian.FDR function from TADA-R repository
+source(TADA_R.R)
 ```
 ---
 
