@@ -40,7 +40,7 @@ project-root/
 
 | Dataset | Access |
 |-------------|--------|
-| Satterstrom et al. 2020 ASD-tested genes with their mutation counts/rates | [Supplementary Tables](https://pmc.ncbi.nlm.nih.gov/articles/PMC7250485/#SD6) |
+| TADA per-gene output parameters | [Satterstrom et al. 2020 Supplementary Tables](https://pmc.ncbi.nlm.nih.gov/articles/PMC7250485/#SD6) |
 
 
 ---
