@@ -10,9 +10,8 @@ In both models, Bayes Factors are calculated and a subsequent FDR-like q-value p
 genes in downstream pathway analysis (see "common-vs-rare-variants-ASD" repo) demonstrated that although this rare-variant driven analysis of risk is valuable and effective, the 
 directionless, 0-1 bounded nature of its output statistic constrains the biological relevance of the TADA/TADA+ output. 
 
-Thus, I have proposed the usage of a directed, normally distributed Wald Z-like statistic, provisionally named "Z-prime" (Z'), derived from the posterior probability of the TADA/TADA+ as mathematically supported by the 
-Bernstein von Mises theorem (BvM). Here I will use develop a Stan Hamiltonian Monte Carlo algorithm to estimate the relative risk distribution for each tested gene, from which the posterior mean and standard deviation can
-be calculated. From then, Z' can be generated per gene. 
+Thus, I have proposed the usage of a directed, normally distributed Wald Z-like statistic, provisionally named "Z-prime" (Z'), derived from the marginal likelihood of the TADA/TADA+ model. 
+Here I will make use of Gamma-Poisson conjugacy to calculate the full mixture posterior mean and standard deviation from which Z' can be generated per gene. 
 
 A developing validation step is to (1) get *de novo* PTV specific q-values from the TADA-derived Bayes Factors per gene using [TADA-R source code](https://github.com/limo936/TADA-R/blob/main/src/TADA_R.R) and 
 (2) use existing pathway analysis code to compare gene rankings under the q-value vs Z', looking at depletion representation specifically. 
@@ -30,8 +29,7 @@ project-root/
 │   └── raw/
 │       └── satterstrom_counts.xlsx
 ├── scripts/
-│   ├── relative_risk.stan    # Stan HMC model setup
-│   └── zprime_calc.R         # Generation of posterior distribution/z-prime calculation
+│   └── zprime_calc.R         # z-prime calculation
 └── results/
 ```
 
@@ -49,18 +47,19 @@ project-root/
 ## Dependencies
 
 ```r
-# Install required packages
-install.packages("rstan")
-
 # Get Bayesian.FDR function from TADA-R repository
 source(TADA_R.R)
+
+# Basic libraries
+library(tidyverse)
+library(readxl)
 ```
 ---
 
 ## Limitations
 
 - Currently performed only on *de novo* protein truncating variants (dn-PTVs)
-- Z' assumes sufficient sample size for BvM approximation to hold
+- Z' assumes sufficient sample size for informative results
 
 ---
 
