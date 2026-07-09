@@ -29,7 +29,7 @@ project-root/
 │   └── raw/
 │       └── satterstrom_counts.xlsx
 ├── scripts/
-│   └── zprime_calc.R         # z-prime calculation
+│   └── zprime.R         # z-prime calculation
 └── results/
 ```
 
