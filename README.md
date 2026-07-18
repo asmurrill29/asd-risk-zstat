@@ -47,12 +47,14 @@ project-root/
 ## Dependencies
 
 ```r
-# Get Bayesian.FDR function from TADA-R repository
+# Get Bayesian.FDR function from TADA-R repository for calculating de novo specific q-value
+download.file("https://raw.githubusercontent.com/limo936/TADA-R/main/src/TADA_R.R",
+              destfile = "TADA_R.R")
 source(TADA_R.R)
 
 # Basic libraries
-library(tidyverse)
 library(readxl)
+library(tidyverse)
 ```
 ---
 
